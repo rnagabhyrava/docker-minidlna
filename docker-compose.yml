@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  minidlna:
+    image: rnagabhyrava/minidlna
+    container_name: minidlna
+    volumes:
+      - /your/videos/folder/:/media/Videos
+      # - /your/Music/folder/:/media/Videos
+      # - /your/Pictures/folder/:/media/Videos
+    network_mode: "host"
+    restart: unless-stopped
